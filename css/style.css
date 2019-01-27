@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Londrina+Outline');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Brush+Script');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Nanum Brush Script", "Courier New", Courier, monospace;
+    color: rgba(255,255,255,0.8);
+}
+
+body {
+    background-image: url("../images/blueprint-center.png");
+    background-repeat: repeat-y;
+    background-size: 100%;
+    overflow: hidden;
+}
+
+h1,
+h2 {
+    font-family: "Londrina Outline";
+}
+
+img {
+    opacity: 0.8;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    padding: 0 2vw;
+}
+
+.header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.header__title {
+    font-size: 16vw;
+    line-height: 0.9;
+    height: 80%;
+    padding-right: 5vw;
+    background-image: url("../images/aldirect.png");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position-x: 98%;
+}
+
+.header__subtitle {
+    display: block;
+    font-size: 6vw;
+    line-height: 1.5;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 95%;
+    flex-basis: 30vh;
+}
+
+.nav__item {
+    position: relative;
+    cursor: pointer;
+    transition: all 200ms;
+}
+
+.nav__img {
+    width: 100%;
+}
+
+.nav__item--hidden {
+    height: 0;
+    overflow: hidden;
+}
+
+.nav__item:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+.nav__item:hover .nav__img {
+    opacity: 1;
+}
+
+.nav__number {
+    font-size: 6vh;
+    position: absolute;
+    top: -20%;
+}
+
+.nav__number--left {
+    left: 10%;
+}
+
+.nav__number--right {
+    right: 10%;
+}
+
+.tools__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+.tools__img {
+    max-height: 70vh;
+    max-width: 50%;
+}
+
+.tools__info {
+    flex-grow: 1;
+    padding: 0vh 2vw 20vh;
+}
+
+.tools__title {
+    font-size: 6vw;
+    margin-bottom: 3vh;
+}
+
+.tools__text {
+    font-size: 3.3vw;
+    letter-spacing: 0.2vw;
+    position: relative;
+}
+
+.tools__box--img-right {
+    flex-direction: row-reverse;
+}
+
+.tools__tooltip {
+    border-bottom: solid 0.2vw rgba(255,255,255,0.8);
+    transition: all 100ms;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.tooltipText {
+    position: absolute;
+    background: url("../images/tipframe.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    top: calc(100% + 3vh);
+    letter-spacing: 0;
+    left: 25%;
+    display: block;
+    color: white;
+    width: 70%;
+    padding: 2vw 2vw 2vw 3vw;
+    z-index: 1;
+}
+
+.sticky {
+    position: fixed;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 81%;
+    align-self: flex-start;
+}
+
+.sticky .nav__item {
+    height: 8vh;
+    padding: 0 1.5vw;
+}
+
+.sticky .nav__img {
+    height: 100%;
+    width: auto;
+}
+
+.sticky .nav__number {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    right: initial;
+}
+
+.sticky .nav__item--hidden {
+    height: 0;
+    overflow: hidden;
+}
