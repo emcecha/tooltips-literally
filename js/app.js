@@ -67,7 +67,7 @@ for (var i = 0; i < navItems.length; i++) {
         if (activeTool > 0) {
 
             if (prev.className.indexOf("nav__item--hidden") > -1) {
-                prev.classList.remove("nav__item--hidden");
+                    prev.classList.remove("nav__item--hidden");
             }
 
         } else {
@@ -83,7 +83,9 @@ for (var i = 0; i < navItems.length; i++) {
         if (activeTool > -1) {
 
             if (backHome.className.indexOf("nav__item--hidden") > -1) {
-                backHome.classList.remove("nav__item--hidden");
+                setTimeout(function () {
+                    backHome.classList.remove("nav__item--hidden");
+                },450);
             }
 
         } else {
@@ -99,7 +101,15 @@ for (var i = 0; i < navItems.length; i++) {
         if (activeTool > -1 && activeTool < toolsBoxes.length - 1) {
 
             if (next.className.indexOf("nav__item--hidden") > -1) {
-                next.classList.remove("nav__item--hidden");
+
+                if (activeTool === 0) {
+                    setTimeout(function () {
+                        next.classList.remove("nav__item--hidden");
+                    },450);
+                } else {
+                    next.classList.remove("nav__item--hidden");
+                }
+
             }
 
         } else  {
